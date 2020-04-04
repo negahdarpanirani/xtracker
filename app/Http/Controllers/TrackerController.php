@@ -18,8 +18,15 @@ class TrackerController extends Controller
         $track=tracker::orderby('id','DESC')->get();
         return view('back.starter',compact('track'));
 
-    }
 
+    }
+  
+    public function map(){
+             
+        $points=tracker::orderby('id','DESC')->get();
+
+        return view('back.map1',compact('points'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -88,4 +95,7 @@ class TrackerController extends Controller
         $msg='دسته بندی با موفقیت حذف شد';
         return redirect(route('admin')) ;
     }
+    
+
+
 }

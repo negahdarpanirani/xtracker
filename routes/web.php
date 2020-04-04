@@ -16,14 +16,18 @@ Route::get('/', function () {
     return view('main');
 });
 
+Route::get('/x', function () {
+    return view('map1');
+});
+
 Auth::routes() ;
 //tracker route
+Route::get('/dashboard/map', 'TrackerController@map')->name('map');
 Route::get('/admin/{tracker}', 'TrackerController@show')->name('show');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'TrackerController@index')->name('admin');
 Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 Route::get('/dashboard/speed/{tracker}', 'HomeController@speed')->name('speed');
-Route::get('/dashboard/map', 'HomeController@map')->name('map');
 Route::get('/chart', 'HomeController@index1')->name('chart');
 Route::get('/dashboard/tanker/{tracker1}', 'HomeController@tanker')->name('tanker1');
 Route::get('/admin/{tracker}', 'TrackerController@destroy')->name('destroy');

@@ -3,69 +3,63 @@
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
-<html>
+
 <head>
-<meta charset="utf-8">
-	<title>نقشه</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>  نقشه</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
 	<script src="https://openlayers.org/en/v4.6.5/build/ol.js" type="text/javascript"></script>
-  
-	<meta charset="utf-8">
-	<title>OpenStreetMap &amp; OpenLayers - Marker Example</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
-	<script src="https://openlayers.org/en/v4.6.5/build/ol.js" type="text/javascript"></script>
-  
   <script>
     /* OSM & OL example code provided by https://mediarealm.com.au/ */
-    var map;
-    var mapLat = 32.4279;
-	var mapLng = 53.6880;
-    var mapDefaultZoom = 6;
+  //   var map;
+  //   var mapLat = 35;
+	// var mapLng = 46;
+  //   var mapDefaultZoom = 6;
     
-    function initialize_map() {
-      map = new ol.Map({
-        target: "map",
-        layers: [
-            new ol.layer.Tile({
-                source: new ol.source.OSM({
-                      url: "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                })
-            })
-        ],
-        view: new ol.View({
-            center: ol.proj.fromLonLat([mapLng, mapLat]),
-            zoom: mapDefaultZoom
-        })
-      });
-    }
+  //   function initialize_map() {
+  //     map = new ol.Map({
+  //       target: "map",
+  //       layers: [
+  //           new ol.layer.Tile({
+  //               source: new ol.source.OSM({
+  //                     url: "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"
+  //               })
+  //           })
+  //       ],
+  //       view: new ol.View({
+  //           center: ol.proj.fromLonLat([mapLng, mapLat]),
+  //           zoom: mapDefaultZoom
+  //       })
+  //     });
+  //   }
 
-    function add_map_point(lat, lng) {
-      var vectorLayer = new ol.layer.Vector({
-        source:new ol.source.Vector({
-          features: [new ol.Feature({
-                geometry: new ol.geom.Point(ol.proj.transform([parseFloat(lng), parseFloat(lat)], 'EPSG:4326', 'EPSG:3857')),
-            })]
-        }),
-        style: new ol.style.Style({
-          image: new ol.style.Icon({
-            anchor: [0.5, 0.5],
-            anchorXUnits: "fraction",
-            anchorYUnits: "fraction",
-            src: "https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg"
-          })
-        })
-      });
+  //   function add_map_point(lat, lng) {
+  //     var vectorLayer = new ol.layer.Vector({
+  //       source:new ol.source.Vector({
+  //         features: [new ol.Feature({
+  //               geometry: new ol.geom.Point(ol.proj.transform([parseFloat(lng), parseFloat(lat)], 'EPSG:4326', 'EPSG:3857')),
+  //           })]
+  //       }),
+  //       style: new ol.style.Style({
+  //         image: new ol.style.Icon({
+  //           anchor: [0.5, 0.5],
+  //           anchorXUnits: "fraction",
+  //           anchorYUnits: "fraction",
+  //           src: "https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg"
+  //         })
+  //       })
+  //     });
 
-      map.addLayer(vectorLayer); 
-    }
+  //     map.addLayer(vectorLayer); 
+  //   }
 
 
   </script>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>نقشه</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -115,6 +109,7 @@ desired effect
 |---------------------------------------------------------|
 -->
 <body class="hold-transition skin-blue sidebar-mini">
+
 <div class="wrapper">
 
   <!-- Main Header -->
@@ -169,7 +164,7 @@ desired effect
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="../public/back/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="../../public/back/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         نگین
@@ -181,7 +176,7 @@ desired effect
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="../public/back/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="../../public/back/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         نسترن
@@ -193,7 +188,7 @@ desired effect
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="../public/back/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="../../../public/back/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         نگین
@@ -205,7 +200,7 @@ desired effect
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="../public/back/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="../../../public/back/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         نسترن
@@ -316,7 +311,27 @@ desired effect
                     </a>
                   </li>
                   <!-- end task item -->
-                
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        ساخت صفحه فرود
+                        <small class="pull-right">80%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar"
+                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">80% تکمیل شده</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                </ul>
+              </li>
+              <li class="footer">
+                <a href="#">نمایش همه</a>
+              </li>
+            </ul>
           </li>
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
@@ -327,7 +342,7 @@ desired effect
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="../../public/back/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="../../../public/back/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
                 میثم نگهدار
@@ -377,7 +392,7 @@ desired effect
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-right image">
-          <img src="../../public/back/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="../../../public/back/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-right info">
           <p>  میثم نگهدار</p>
@@ -399,18 +414,17 @@ desired effect
       <!-- /.search form -->
 
       <!-- Sidebar Menu -->
-      <ul  class="sidebar-menu" data-widget="tree">
-        <li class="header">منوی ردیابی</li>
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">تیتر</li>
         <!-- Optionally, you can add icons to the links -->
-        <li><a href="{{route('account')}}"><i class="fa fa-link"></i> <span>ردیابی</span></a></li>
+        <li class="active"><a href="{{route('account')}}"><i class="fa fa-link"></i> <span>مدیریت</span></a></li>
+        <li><a href="#"><i class="fa fa-link"></i> <span>آمار</span></a>
         <li ><a href="{{route('account')}}">حسابداری</a></li>
-        <li ><a href="#">نقشه </a></li>
-        <li ><a href="{{route('account')}}">محدود سازی سرعت </a></li>
-        <li ><a href="{{route('account')}}">محدود سازی مسیر حرکت </a></li>
-        <li ><a href="{{route('account')}}">هشدار های صادر شده</a></li>
-        <li ><a href="{{route('account')}}"> میزان مصرف سوخت</a></li>
-        <li ><a href="{{route('account')}}">گزارشات مربوط به محدوده های حرکت</a></li>
-         <li> <a href="#"><i class="fa fa-link"></i> <span>اشتراک</span> </li>
+        <li class="treeview">
+        
+         <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>اشتراک</span>
+          </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -422,6 +436,7 @@ desired effect
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
+        موقعیت مکانی
        
       </h1>
       <ol class="breadcrumb">
@@ -431,32 +446,12 @@ desired effect
     </section>
 
     <!-- Main content -->
-    <section class="content container-fluid">
-      <!--------------------------
-        | Your Page Content Here |
-        -------------------------->
-
-    
-        <body onload="initialize_map(); add_map_point( 35,46);">
-        
-  <div id="map" style="width: 78vw; height: 78vh;"></div>
-  </div>
-
- 
-
-    </section>
-    <!-- /.content -->
-  </div>
-        <!-- <footer class="main-footer text-left">
-    <strong>Copyleft &copy; 2014-2017 <a href="https://adminlte.io">Almsaeed Studio</a> & <a href="http://hosseinizadeh.ir/adminlte">Alireza Hosseinizadeh</a></strong>
-  </footer> -->
-
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-
-  <!-- Main Footer -->
+  
+    <body>
+  
+    <div class="container">
+<div class="d-flex justify-content-center">
+<div id="map" style="width: 75vw; height: 80vh;"></div>
 
 
   <!-- Control Sidebar -->
@@ -541,17 +536,82 @@ desired effect
 <!-- REQUIRED JS SCRIPTS -->
 
 <!-- jQuery 3 -->
-<script src="../public/back/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../../public/back/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="../public/back/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../public/back/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../public/back/dist/js/adminlte.min.js"></script>
+<script src="../../public/back/dist/js/adminlte.min.js"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. -->
-     <div id="container"></div>
-     <script src="https://code.highcharts.com/highcharts.js"></script>
+     <script>
 
+
+ $(document).ready(load_data);
+ function make_map() {
+
+
+  function load_data(){
+    alert("ht")
+    var map;
+    var mapLat = 35;
+	var mapLng = 46;
+    var mapDefaultZoom = 6;
+    
+    function initialize_map() {
+      map = new ol.Map({
+        target: "map",
+        layers: [
+            new ol.layer.Tile({
+                source: new ol.source.OSM({
+                      url: "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                })
+            })
+        ],
+        view: new ol.View({
+            center: ol.proj.fromLonLat([mapLng, mapLat]),
+            zoom: mapDefaultZoom
+        })
+      });
+    }
+
+
+    function add_map_point(lat, lng) {
+      var vectorLayer = new ol.layer.Vector({
+        source:new ol.source.Vector({
+          features: [new ol.Feature({
+                geometry: new ol.geom.Point(ol.proj.transform([parseFloat(lng), parseFloat(lat)], 'EPSG:4326', 'EPSG:3857')),
+            })]
+        }),
+        style: new ol.style.Style({
+          image: new ol.style.Icon({
+            anchor: [0.5, 0.5],
+            anchorXUnits: "fraction",
+            anchorYUnits: "fraction",
+            src: "https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg"
+          })
+        })
+      });
+
+      map.addLayer(vectorLayer); 
+    }
+    initialize_map();
+  $.ajax({
+url:"http://localhost/blog/public/api/dashboard/map",
+async:false,
+success:(data)=>{
+  data.forEach(obj => {
+           add_map_point(obj.lat , obj.lng );
+           });
+ alert("hi")
+}
+});
+setTimeout(load_data, 6000);
+
+}
+
+}
+</script>
 </body>
 </html>

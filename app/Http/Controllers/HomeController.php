@@ -44,11 +44,5 @@ class HomeController extends Controller
     return view('back.speed',compact('tracker'));
     }
 
-    public function map()
-    {
-        $track=tracker::orderby('id','DESC')->get();
-        return view('back.map',compact('track'));
-    }
-
 
 }
