@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
@@ -414,17 +414,18 @@ desired effect
       <!-- /.search form -->
 
       <!-- Sidebar Menu -->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">تیتر</li>
+      <ul  class="sidebar-menu" data-widget="tree">
+        <li class="header">منوی ردیابی</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="{{route('account')}}"><i class="fa fa-link"></i> <span>مدیریت</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>آمار</span></a>
+        <li><a href="{{route('account')}}"><i class="fa fa-link"></i> <span>ردیابی</span></a></li>
         <li ><a href="{{route('account')}}">حسابداری</a></li>
-        <li class="treeview">
-        
-         <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>اشتراک</span>
-          </li>
+        <li ><a href="#">نقشه </a></li>
+        <li ><a href="{{route('account')}}">محدود سازی سرعت </a></li>
+        <li ><a href="{{route('account')}}">محدود سازی مسیر حرکت </a></li>
+        <li ><a href="{{route('account')}}">هشدار های صادر شده</a></li>
+        <li ><a href="{{route('account')}}"> میزان مصرف سوخت</a></li>
+        <li ><a href="{{route('account')}}">گزارشات مربوط به محدوده های حرکت</a></li>
+         <li> <a href="#"><i class="fa fa-link"></i> <span>اشتراک</span> </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -547,14 +548,7 @@ desired effect
      user experience. -->
      <script>
 
-
- $(document).ready(load_data);
- function make_map() {
-
-
-  function load_data(){
-    alert("ht")
-    var map;
+var map;
     var mapLat = 35;
 	var mapLng = 46;
     var mapDefaultZoom = 6;
@@ -576,7 +570,6 @@ desired effect
       });
     }
 
-
     function add_map_point(lat, lng) {
       var vectorLayer = new ol.layer.Vector({
         source:new ol.source.Vector({
@@ -594,9 +587,13 @@ desired effect
         })
       });
 
-      map.addLayer(vectorLayer); 
-    }
-    initialize_map();
+     map.addLayer(vectorLayer); 
+    } 
+
+ $(document).ready(load_data);
+ initialize_map();
+  function load_data(){
+  
   $.ajax({
 url:"http://localhost/blog/public/api/dashboard/map",
 async:false,
@@ -611,7 +608,7 @@ setTimeout(load_data, 6000);
 
 }
 
-}
+
 </script>
 </body>
-</html>
+</html> 
