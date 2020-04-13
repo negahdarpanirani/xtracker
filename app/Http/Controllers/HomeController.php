@@ -28,17 +28,13 @@ class HomeController extends Controller
      return view('home');
     }
 
-    public function admin()
-    {
-     return view('back.starter');
-    }
-
-    public function dashboard()
+    public function manage()
     {
     $track=tracker::orderby('id','DESC')->get();
-    return view('back.dashboard',compact('track'));
+     return view('back.manage',compact('track'));
     }
 
+ 
     public function speed(tracker $tracker)
     {
     return view('back.speed',compact('tracker'));

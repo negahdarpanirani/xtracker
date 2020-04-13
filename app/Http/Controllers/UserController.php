@@ -87,9 +87,6 @@ class UserController extends Controller
 
     public function userstore(Request $request)
     {        
-  
-        return $request;
-        
         $contact= new contactform([
             
             'name'=>$request->get('name'),

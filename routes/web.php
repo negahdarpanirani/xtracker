@@ -20,17 +20,21 @@ Route::get('/x', function () {
     return view('map1');
 });
 
+
+//warning route
+Route::post('/dashboard/map', 'warningcontroller@speedlimit')->name('speedlimit');
+
 Auth::routes() ;
 //tracker route
 Route::get('/dashboard/map', 'TrackerController@map')->name('map');
-Route::get('/admin/{tracker}', 'TrackerController@show')->name('show');
+Route::get('/manage/{tracker}', 'TrackerController@show')->name('show');
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/admin', 'TrackerController@index')->name('admin');
+Route::get('/manage', 'HomeController@manage')->name('manage');
 Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 Route::get('/dashboard/speed/{tracker}', 'HomeController@speed')->name('speed');
 Route::get('/chart', 'HomeController@index1')->name('chart');
 Route::get('/dashboard/tanker/{tracker1}', 'HomeController@tanker')->name('tanker1');
-Route::get('/admin/{tracker}', 'TrackerController@destroy')->name('destroy');
+Route::get('/manage/{tracker}', 'TrackerController@destroy')->name('destroy');
 
 
 //accounting route

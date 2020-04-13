@@ -446,7 +446,7 @@ desired effect
                             <label for="model " class="col-md-4 col-form-label text-md-right">{{ __('مدل دستگاه ') }}</label>
                             <div class="col-md-6">
                                 <input id="model" type="text" class="form-control @error('model ') is-invalid @enderror" name="model" value="{{ old('model') }}" required autocomplete="model" autofocus>
-                                @error('model ')
+                                @error('model')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -458,17 +458,6 @@ desired effect
                             <div class="col-md-6">
                                 <input id="number" type="text" class="form-control @error('number') is-invalid @enderror" name="number" value="{{ old('number') }}" required autocomplete="number" autofocus>
                                 @error('number')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="yuan" class="col-md-4 col-form-label text-md-right">{{ __('قیمت یوآن در زمان خرید ') }}</label>
-                            <div class="col-md-6">
-                                <input id="yuan" type="text" class="form-control @error('yuan') is-invalid @enderror" name="yuan" value="{{ old('yuan') }}" required autocomplete="yuan" autofocus>
-                                @error('yuan')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

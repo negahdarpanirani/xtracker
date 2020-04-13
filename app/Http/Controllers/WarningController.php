@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\tracker;
+use App\warning;
 use Illuminate\Http\Request;
 
-class TrackerController extends Controller
+class WarningController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,21 +14,7 @@ class TrackerController extends Controller
      */
     public function index()
     {
-        
-        $track=tracker::orderby('id','DESC')->get();
-        return view('back.manage',compact('track'));
-
-
-    }
-  
-    public function map(){
-        return view('back.map1');
-    }
-    
-    public function dashboard()
-    {
-    $track=tracker::orderby('id','DESC')->get();
-    return view('back.dashboard',compact('track'));
+        //
     }
 
     /**
@@ -47,29 +33,34 @@ class TrackerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
+    // add speed limit selected to db
+    public function speedlimit(Request $request)
+    { 
+        $speed=new warning([
+            'speedlimit'=> $request->get('speedlimit')
+            ]);
+            $speed-> save();
+            return redirect(route('map')) ;
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\tracker  $tracker
+     * @param  \App\warning  $warning
      * @return \Illuminate\Http\Response
      */
-    public function show(tracker $tracker)
+    public function show(warning $warning)
     {
-    
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\tracker  $tracker
+     * @param  \App\warning  $warning
      * @return \Illuminate\Http\Response
      */
-    public function edit(tracker $tracker)
+    public function edit(warning $warning)
     {
         //
     }
@@ -78,10 +69,10 @@ class TrackerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\tracker  $tracker
+     * @param  \App\warning  $warning
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, tracker $tracker)
+    public function update(Request $request, warning $warning)
     {
         //
     }
@@ -89,17 +80,11 @@ class TrackerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\tracker  $tracker
+     * @param  \App\warning  $warning
      * @return \Illuminate\Http\Response
      */
-    public function destroy(tracker $tracker)
+    public function destroy(warning $warning)
     {
-        return $traker;
-        $tracker-> delete();
-        $msg='دسته بندی با موفقیت حذف شد';
-        return redirect(route('manage')) ;
+        //
     }
-    
-
-
 }

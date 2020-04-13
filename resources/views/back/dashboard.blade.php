@@ -435,7 +435,6 @@ desired effect
         <td>{{$stop}} </td>
         <td><a href="{{route('destroy',$cat->id)}}" onclick="return confirm('آیتم حذف شود')">حذف</a></td>
         <td>{{ $cat->speed  }} </td>
-        <td><a href="{{route('tanker1',$cat->tanker1)}}">{{$cat->tanker1}}</a> </td> 
     </tr>
     @endforeach
 

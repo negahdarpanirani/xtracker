@@ -450,11 +450,31 @@ desired effect
   
     <body>
   
-    <div class="container">
+<div class="container">
 <div class="d-flex justify-content-center">
-<div id="map" style="width: 75vw; height: 80vh;"></div>
-
-
+<form name="speedlimitform" action="{{route('speedlimit')}}" id ="jsform" method="POST" role="form">
+@csrf
+<select class="browser-default custom-select" name="trackerselect">
+  <option selected>دستگاه مورد نطر خود را انتخاب کنید</option>
+  
+  </select>
+<select class="browser-default custom-select" name="speedlimit">
+  <option selected>محدوده سرعت را انتخاب کنید</option>
+  <option name="50" value="5">سرعت بیشتر از 50 کیلومتر بر ساعت </option>
+  <option name="60"  value="6">سرعت بیشتر از 60 کیلومتر بر ساعت </option>
+  <option name="70" value="7">سرعت بیشتر از 70 کیلومتر بر ساعت </option>
+  <option name="80"  value="8">سرعت بیشتر از 80 کیلومتر بر ساعت </option>
+  <option name="90"  value="9">سرعت بیشتر از 90 کیلومتر بر ساعت </option>
+  <option name="100"  value="10">سرعت بیشتر از 100 کیلومتر بر ساعت </option>
+  <option name="110"  value="11">سرعت بیشتر از 110 کیلومتر بر ساعت </option>
+  <option name="120"  value="12">سرعت بیشتر از 120 کیلومتر بر ساعت </option>
+  <option name="130"  value="13">سرعت بیشتر از 130 کیلومتر بر ساعت </option>
+</select>
+<button type="submit" class="btn btn-primary">اعمال محدودیت </button>
+</form>
+<div class="form-group">
+<div class="dropdown">
+  </div><div id="map" style="width: 70vw; height: 70vh;"></div>
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Create the tabs -->
@@ -601,12 +621,12 @@ success:(data)=>{
   data.forEach(obj => {
            add_map_point(obj.lat , obj.lng );
            });
- alert("hi")
 }
 });
 setTimeout(load_data, 6000);
 
 }
+
 
 
 </script>

@@ -18,4 +18,5 @@ class ApiController extends Controller
         $a=response()->json($points);
         return $a;
     }
+
 }

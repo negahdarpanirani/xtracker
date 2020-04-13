@@ -1,29 +1,81 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
-<html>
+
 <head>
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>{{$pagetitle1 ?? ''}}</title>
+  <title>  نقشه</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
+	<script src="https://openlayers.org/en/v4.6.5/build/ol.js" type="text/javascript"></script>
+  <script>
+    /* OSM & OL example code provided by https://mediarealm.com.au/ */
+  //   var map;
+  //   var mapLat = 35;
+	// var mapLng = 46;
+  //   var mapDefaultZoom = 6;
+    
+  //   function initialize_map() {
+  //     map = new ol.Map({
+  //       target: "map",
+  //       layers: [
+  //           new ol.layer.Tile({
+  //               source: new ol.source.OSM({
+  //                     url: "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"
+  //               })
+  //           })
+  //       ],
+  //       view: new ol.View({
+  //           center: ol.proj.fromLonLat([mapLng, mapLat]),
+  //           zoom: mapDefaultZoom
+  //       })
+  //     });
+  //   }
+
+  //   function add_map_point(lat, lng) {
+  //     var vectorLayer = new ol.layer.Vector({
+  //       source:new ol.source.Vector({
+  //         features: [new ol.Feature({
+  //               geometry: new ol.geom.Point(ol.proj.transform([parseFloat(lng), parseFloat(lat)], 'EPSG:4326', 'EPSG:3857')),
+  //           })]
+  //       }),
+  //       style: new ol.style.Style({
+  //         image: new ol.style.Icon({
+  //           anchor: [0.5, 0.5],
+  //           anchorXUnits: "fraction",
+  //           anchorYUnits: "fraction",
+  //           src: "https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg"
+  //         })
+  //       })
+  //     });
+
+  //     map.addLayer(vectorLayer); 
+  //   }
+
+
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="../public/back/dist/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="../../public/back/dist/css/bootstrap-theme.css">
   <!-- Bootstrap rtl -->
-  <link rel="stylesheet" href="../public/back/dist/css/rtl.css">
+  <link rel="stylesheet" href="../../public/back/dist/css/rtl.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../public/back/bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../public/back/bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="../public/back/bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="../../public/back/bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../public/back/dist/css/AdminLTE.css">
+  <link rel="stylesheet" href="../../public/back/dist/css/AdminLTE.css">
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
-  <link rel="stylesheet" href="../public/back/dist/css/skins/skin-blue.min.css">
+  <link rel="stylesheet" href="../../public/back/dist/css/skins/skin-blue.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -57,6 +109,7 @@ desired effect
 |---------------------------------------------------------|
 -->
 <body class="hold-transition skin-blue sidebar-mini">
+
 <div class="wrapper">
 
   <!-- Main Header -->
@@ -111,7 +164,7 @@ desired effect
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="../public/back/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="../../public/back/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         نگین
@@ -123,7 +176,7 @@ desired effect
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="../public/back/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="../../public/back/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         نسترن
@@ -135,7 +188,7 @@ desired effect
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="../public/back/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="../../../public/back/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         نگین
@@ -147,7 +200,7 @@ desired effect
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="../public/back/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="../../../public/back/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         نسترن
@@ -283,13 +336,13 @@ desired effect
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="../public/back/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="../../public/back/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs">میثم نگهدار</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="../public/back/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="../../../public/back/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
                 میثم نگهدار
@@ -339,7 +392,7 @@ desired effect
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-right image">
-          <img src="../public/back/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="../../../public/back/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-right info">
           <p>  میثم نگهدار</p>
@@ -361,18 +414,18 @@ desired effect
       <!-- /.search form -->
 
       <!-- Sidebar Menu -->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">منوی مدیریت</li>
+      <ul  class="sidebar-menu" data-widget="tree">
+        <li class="header">منوی ردیابی</li>
         <!-- Optionally, you can add icons to the links -->
-        <li ><a href="{{route('account')}}"><i></i> <span>مدیریت</span></a></li>
-        <li><a href="#"><i></i> <span>آمار</span></a>
+        <li><a href="{{route('account')}}"><i class="fa fa-link"></i> <span>ردیابی</span></a></li>
         <li ><a href="{{route('account')}}">حسابداری</a></li>
-        <li ><a href="{{route('dashboard')}}">ردیابی</a></li>
-        <li ><a href="{{route('map')}}">نقشه</a></li>
-        <li ><a href="{{route('profiles')}}">پروفایل</a></li>
-         <li >
-          <a href="#"> <span>اشتراک</span>
-          </li>
+        <li ><a href="#">نقشه </a></li>
+        <li ><a href="{{route('account')}}">محدود سازی سرعت </a></li>
+        <li ><a href="{{route('account')}}">محدود سازی مسیر حرکت </a></li>
+        <li ><a href="{{route('account')}}">هشدار های صادر شده</a></li>
+        <li ><a href="{{route('account')}}"> میزان مصرف سوخت</a></li>
+        <li ><a href="{{route('account')}}">گزارشات مربوط به محدوده های حرکت</a></li>
+         <li> <a href="#"><i class="fa fa-link"></i> <span>اشتراک</span> </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -384,7 +437,7 @@ desired effect
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        مدیریت ردیاب ها
+        موقعیت مکانی
        
       </h1>
       <ol class="breadcrumb">
@@ -394,46 +447,34 @@ desired effect
     </section>
 
     <!-- Main content -->
-    <section class="content container-fluid">
-
-      <!--------------------------
-        | Your Page Content Here |
-        -------------------------->
-        <!-- <footer class="main-footer text-left">
-    <strong>Copyleft &copy; 2014-2017 <a href="https://adminlte.io">Almsaeed Studio</a> & <a href="http://hosseinizadeh.ir/adminlte">Alireza Hosseinizadeh</a></strong>
-  </footer> -->
   
     <body>
-    <div class="container">
+  
+<div class="container">
 <div class="d-flex justify-content-center">
-<table class="table">
-  <thead>
-    <tr>
-        <td>شناسه </td>
-        <td>سازمان </td>
-        <td>مدیر ارشد </td>
-        <td>نام دارنده </td>
-    </tr>
-  </thead>
-    <body>
-    @foreach($track as $cat)
-    <tr>
-        <td>{{$cat->id}}</td>
-        <td>{{$cat->department_id}}</td>
-        <td>{{$cat->user_id}} </td>
-        <td>{{$cat->stutos}} </td>
-        <td><a href="{{route('destroy',$cat->id)}}" onclick="return confirm('آیتم حذف شود')">حذف</a></td>
-    </tr>
-    @endforeach
-
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-
-  <!-- Main Footer -->
-
-
+<form name="speedlimitform" action="{{route('speedlimit')}}" id ="jsform" method="POST" role="form">
+@csrf
+<select class="browser-default custom-select" name="trackerselect">
+  <option selected>دستگاه مورد نطر خود را انتخاب کنید</option>
+  
+  </select>
+<select class="browser-default custom-select" name="speedlimit">
+  <option selected>محدوده سرعت را انتخاب کنید</option>
+  <option name="50" value="5">سرعت بیشتر از 50 کیلومتر بر ساعت </option>
+  <option name="60"  value="6">سرعت بیشتر از 60 کیلومتر بر ساعت </option>
+  <option name="70" value="7">سرعت بیشتر از 70 کیلومتر بر ساعت </option>
+  <option name="80"  value="8">سرعت بیشتر از 80 کیلومتر بر ساعت </option>
+  <option name="90"  value="9">سرعت بیشتر از 90 کیلومتر بر ساعت </option>
+  <option name="100"  value="10">سرعت بیشتر از 100 کیلومتر بر ساعت </option>
+  <option name="110"  value="11">سرعت بیشتر از 110 کیلومتر بر ساعت </option>
+  <option name="120"  value="12">سرعت بیشتر از 120 کیلومتر بر ساعت </option>
+  <option name="130"  value="13">سرعت بیشتر از 130 کیلومتر بر ساعت </option>
+</select>
+<button type="submit" class="btn btn-primary">اعمال محدودیت </button>
+</form>
+<div class="form-group">
+<div class="dropdown">
+  </div><div id="map" style="width: 70vw; height: 70vh;"></div>
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Create the tabs -->
@@ -516,14 +557,78 @@ desired effect
 <!-- REQUIRED JS SCRIPTS -->
 
 <!-- jQuery 3 -->
-<script src="../public/back/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../../public/back/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="../public/back/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../public/back/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../public/back/dist/js/adminlte.min.js"></script>
+<script src="../../public/back/dist/js/adminlte.min.js"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. -->
+     <script>
+
+var map;
+    var mapLat = 35;
+	var mapLng = 46;
+    var mapDefaultZoom = 6;
+    
+    function initialize_map() {
+      map = new ol.Map({
+        target: "map",
+        layers: [
+            new ol.layer.Tile({
+                source: new ol.source.OSM({
+                      url: "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                })
+            })
+        ],
+        view: new ol.View({
+            center: ol.proj.fromLonLat([mapLng, mapLat]),
+            zoom: mapDefaultZoom
+        })
+      });
+    }
+
+    function add_map_point(lat, lng) {
+      var vectorLayer = new ol.layer.Vector({
+        source:new ol.source.Vector({
+          features: [new ol.Feature({
+                geometry: new ol.geom.Point(ol.proj.transform([parseFloat(lng), parseFloat(lat)], 'EPSG:4326', 'EPSG:3857')),
+            })]
+        }),
+        style: new ol.style.Style({
+          image: new ol.style.Icon({
+            anchor: [0.5, 0.5],
+            anchorXUnits: "fraction",
+            anchorYUnits: "fraction",
+            src: "https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg"
+          })
+        })
+      });
+
+     map.addLayer(vectorLayer); 
+    } 
+
+ $(document).ready(load_data);
+ initialize_map();
+  function load_data(){
+  
+  $.ajax({
+url:"http://localhost/blog/public/api/dashboard/map",
+async:false,
+success:(data)=>{
+  data.forEach(obj => {
+           add_map_point(obj.lat , obj.lng );
+           });
+}
+});
+setTimeout(load_data, 6000);
+
+}
+
+
+
+</script>
 </body>
-</html>
+</html> 

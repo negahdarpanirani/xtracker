@@ -34,7 +34,7 @@
                   <ul>
                       <li class="active"><a href="{{route('home')}}">خانه</a></li>
                       <li><a href="#about"> ردیابی </a></li>
-                      <li><a href="{{route('admin')}}">مدیریت</a></li>
+                      <li><a href="{{route('manage')}}">مدیریت</a></li>
                       <li><a href="{{route('account')}}">حسابداری</a></li>
                       <li><a href="#portfolio">آمار</a></li>
                       <li class="drop-down"><a href="#">پنل کاربری </a>
